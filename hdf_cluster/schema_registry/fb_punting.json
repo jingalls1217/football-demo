@@ -1,0 +1,16 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "punting",	
+   "fields" : [	
+      { "name" : "gameid" , "type" : "string" }	,
+      { "name" : "category" , "type" : "string" }	,
+      { "name" : "playerid" , "type" : "string" }	,
+      { "name" : "team" , "type" : "string" }	,
+      { "name" : "homeaway" , "type" : "string" }	,
+      { "name" : "name" , "type" : "string" }	,
+      { "name" : "pts" , "type" : "int" }	,
+      { "name" : "yds" , "type" : "int" }	,
+      { "name" : "avg" , "type" : "int" }	,
+      { "name" : "i20" , "type" : "int" }	,
+      { "name" : "lng" , "type" : "int" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	

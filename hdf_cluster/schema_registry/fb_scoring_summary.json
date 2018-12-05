@@ -1,0 +1,11 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "scoring_summary",	
+   "fields" : [	
+      { "name" : "gameid" , "type" : "string" }	,
+      { "name" : "playid" , "type" : "string" }	,
+      { "name" : "type" , "type" : "string" }	,
+      { "name" : "desc" , "type" : "string" }	,
+      { "name" : "qtr" , "type" : "int" }	,
+      { "name" : "team" , "type" : "string" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	

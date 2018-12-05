@@ -1,0 +1,18 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "drive_plays",	
+   "fields" : [	
+      { "name" : "driveid" , "type" : "string" }	,
+      { "name" : "gameid" , "type" : "string" }	,
+      { "name" : "playid" , "type" : "string" }	,
+      { "name" : "sp" , "type" : "int" }	,
+      { "name" : "qtr" , "type" : "int" }	,
+      { "name" : "down" , "type" : "int" }	,
+      { "name" : "ptime" , "type" : "string" }	,
+      { "name" : "yrdln" , "type" : "string" }	,
+      { "name" : "ydstogo" , "type" : "int" }	,
+      { "name" : "ydsnet" , "type" : "int" }	,
+      { "name" : "posteam" , "type" : "string" }	,
+      { "name" : "desc" , "type" : "string" }	,
+      { "name" : "note" , "type" : "string" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	

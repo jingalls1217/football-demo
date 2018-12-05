@@ -1,0 +1,16 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "defense",	
+   "fields" : [	
+      { "name" : "gameid" , "type" : "string" }	,
+      { "name" : "category" , "type" : "string" }	,
+      { "name" : "playerid" , "type" : "string" }	,
+      { "name" : "team" , "type" : "string" }	,
+      { "name" : "homeaway" , "type" : "string" }	,
+      { "name" : "name" , "type" : "string" }	,
+      { "name" : "tkl" , "type" : "int" }	,
+      { "name" : "ast" , "type" : "int" }	,
+      { "name" : "sk" , "type" : "int" }	,
+      { "name" : "ints" , "type" : "int" }	,
+      { "name" : "ffum" , "type" : "int" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	

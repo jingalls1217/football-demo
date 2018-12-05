@@ -1,0 +1,9 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "scoring_players",	
+   "fields" : [	
+      { "name" : "gameid" , "type" : "string" }	,
+      { "name" : "playid" , "type" : "string" }	,
+      { "name" : "name" , "type" : "string" }	,
+      { "name" : "playerid" , "type" : "string" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	

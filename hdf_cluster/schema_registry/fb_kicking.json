@@ -1,0 +1,20 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "kicking",	
+   "fields" : [	
+      { "name" : "gameid" , "type" : "string" }	,
+      { "name" : "category" , "type" : "string" }	,
+      { "name" : "playerid" , "type" : "string" }	,
+      { "name" : "team" , "type" : "string" }	,
+      { "name" : "homeaway" , "type" : "string" }	,
+      { "name" : "name" , "type" : "string" }	,
+      { "name" : "fgm" , "type" : "int" }	,
+      { "name" : "fga" , "type" : "int" }	,
+      { "name" : "fgyds" , "type" : "int" }	,
+      { "name" : "totpfg" , "type" : "int" }	,
+      { "name" : "xpmade" , "type" : "int" }	,
+      { "name" : "xpmissed" , "type" : "int" }	,
+      { "name" : "xpa" , "type" : "int" }	,
+      { "name" : "xpb" , "type" : "int" }	,
+      { "name" : "xptot" , "type" : "int" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	

@@ -1,0 +1,25 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "team",	
+   "fields" : [	
+      { "name" : "gameid" , "type" : "string" }	,
+      { "name" : "homeaway" , "type" : "string" }	,
+      { "name" : "team" , "type" : "string" }	,
+      { "name" : "score_qtr1" , "type" : "int" }	,
+      { "name" : "score_qtr2" , "type" : "int" }	,
+      { "name" : "score_qtr3" , "type" : "int" }	,
+      { "name" : "score_qtr4" , "type" : "int" }	,
+      { "name" : "score_ovrtime" , "type" : "int" }	,
+      { "name" : "score_tot" , "type" : "int" }	,
+      { "name" : "totfd" , "type" : "int" }	,
+      { "name" : "totyds" , "type" : "int" }	,
+      { "name" : "pyds" , "type" : "int" }	,
+      { "name" : "ryds" , "type" : "int" }	,
+      { "name" : "pen" , "type" : "int" }	,
+      { "name" : "penyds" , "type" : "int" }	,
+      { "name" : "trnovr" , "type" : "int" }	,
+      { "name" : "pt" , "type" : "int" }	,
+      { "name" : "ptyds" , "type" : "int" }	,
+      { "name" : "ptavg" , "type" : "int" }	,
+      { "name" : "top" , "type" : "string" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	

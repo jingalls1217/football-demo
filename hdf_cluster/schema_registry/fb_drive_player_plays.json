@@ -1,0 +1,15 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "drive_player_plays",	
+   "fields" : [	
+      { "name" : "playerid" , "type" : "string" }	,
+      { "name" : "playid" , "type" : "string" }	,
+      { "name" : "driveid" , "type" : "string" }	,
+      { "name" : "gameid" , "type" : "string" }	,
+      { "name" : "sequence" , "type" : "int" }	,
+      { "name" : "clubcode" , "type" : "string" }	,
+      { "name" : "playerName" , "type" : "string" }	,
+      { "name" : "statId" , "type" : "int" }	,
+      { "name" : "yards" , "type" : "int" }	,
+      { "name" : "ord" , "type" : "string" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	

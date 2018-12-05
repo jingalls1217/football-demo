@@ -1,0 +1,18 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "rushing",	
+   "fields" : [	
+      { "name" : "gameid" , "type" : "string" }	,
+      { "name" : "category" , "type" : "string" }	,
+      { "name" : "playerid" , "type" : "string" }	,
+      { "name" : "team" , "type" : "string" }	,
+      { "name" : "homeaway" , "type" : "string" }	,
+      { "name" : "name" , "type" : "string" }	,
+      { "name" : "att" , "type" : "int" }	,
+      { "name" : "yds" , "type" : "int" }	,
+      { "name" : "tds" , "type" : "int" }	,
+      { "name" : "lng" , "type" : "int" }	,
+      { "name" : "lngtd" , "type" : "int" }	,
+      { "name" : "twopta" , "type" : "int" }	,
+      { "name" : "twoptm" , "type" : "int" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	

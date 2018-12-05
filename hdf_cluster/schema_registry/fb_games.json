@@ -1,0 +1,25 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "games",	
+   "fields" : [	
+      { "name" : "season" , "type" : "int" }	,
+      { "name" : "week" , "type" : "int" }	,
+      { "name" : "type" , "type" : "string" }	,
+      { "name" : "gd" , "type" : "string" }	,
+      { "name" : "eid" , "type" : "string" }	,
+      { "name" : "gsis" , "type" : "string" }	,
+      { "name" : "d" , "type" : "string" }	,
+      { "name" : "t" , "type" : "string" }	,
+      { "name" : "q" , "type" : "string" }	,
+      { "name" : "k" , "type" : "string" }	,
+      { "name" : "hm" , "type" : "string" }	,
+      { "name" : "hnn" , "type" : "string" }	,
+      { "name" : "hs" , "type" : "int" }	,
+      { "name" : "v" , "type" : "string" }	,
+      { "name" : "vnn" , "type" : "string" }	,
+      { "name" : "vs" , "type" : "int" }	,
+      { "name" : "p" , "type" : "string" }	,
+      { "name" : "rz" , "type" : "string" }	,
+      { "name" : "ga" , "type" : "string" }	,
+      { "name" : "gt" , "type" : "string" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	

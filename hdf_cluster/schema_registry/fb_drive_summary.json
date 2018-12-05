@@ -1,0 +1,24 @@
+{ "type" : "record", "namespace": "hortonworks.hdf.refapp.football", "name" : "drive_summary",	
+   "fields" : [	
+      { "name" : "driveid" , "type" : "string" }	,
+      { "name" : "gameid" , "type" : "string" }	,
+      { "name" : "posteam" , "type" : "string" }	,
+      { "name" : "qtr" , "type" : "int" }	,
+      { "name" : "redzone" , "type" : "boolean" }	,
+      { "name" : "fds" , "type" : "int" }	,
+      { "name" : "result" , "type" : "string" }	,
+      { "name" : "penyds" , "type" : "int" }	,
+      { "name" : "ydsgained" , "type" : "int" }	,
+      { "name" : "numplays" , "type" : "int" }	,
+      { "name" : "postime" , "type" : "string" }	,
+      { "name" : "start_qtr" , "type" : "int" }	,
+      { "name" : "start_time" , "type" : "string" }	,
+      { "name" : "start_yrdln" , "type" : "string" }	,
+      { "name" : "start_team" , "type" : "string" }	,
+      { "name" : "end_qtr" , "type" : "int" }	,
+      { "name" : "end_time" , "type" : "string" }	,
+      { "name" : "end_yrdln" , "type" : "string" }	,
+      { "name" : "end_team" , "type" : "string" }	,
+      { "name" : "timestamp" , "type" : "long" }	
+   ]	
+}	
