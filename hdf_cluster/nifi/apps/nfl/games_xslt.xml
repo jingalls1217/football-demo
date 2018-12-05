@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0">
+
+    <xsl:variable name="currdate" select="current-dateTime()" />
+
+    <xsl:template match="@*|node()">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="ss/gms/g">
+        <xsl:copy>
+            <xsl:attribute name="season" select="ancestor::ss/gms/@y"/>
+            <xsl:attribute name="week" select="ancestor::ss/gms/@w"/>
+            <xsl:attribute name="type" select="ancestor::ss/gms/@t"/>
+            <xsl:attribute name="gd" select="ancestor::ss/gms/@gd"/>
+            <xsl:apply-templates select="@*"/>
+            <xsl:apply-templates/>
+            <xsl:attribute name="timestamp"><xsl:value-of  select="round((xs:dateTime($currdate) - xs:dateTime('1970-01-01T00:00:00') ) div xs:dayTimeDuration('PT1S'))"/></xsl:attribute>
+
+        </xsl:copy>
+    </xsl:template>
+
+</xsl:transform>
