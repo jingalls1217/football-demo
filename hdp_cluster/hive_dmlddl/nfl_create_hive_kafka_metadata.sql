@@ -1,8 +1,9 @@
+DROP DATABASE IF EXISTS nfl_kafka CASCADE;		
+CREATE DATABASE nfl_kafka ;		
 
+DROP TABLE IF EXISTS nfl_kafka.passing ;		
+CREATE EXTERNAL TABLE nfl_kafka.passing (		
 
-DROP TABLE IF EXISTS nfl.kafka_passing ;		
-CREATE EXTERNAL TABLE nfl.kafka_passing (		
-		
 `gameid`	string 	,
 `category`	string 	,
 `playerid`	string 	,
@@ -18,7 +19,7 @@ CREATE EXTERNAL TABLE nfl.kafka_passing (
 `twoptm`	smallint 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"passing"	,
@@ -26,11 +27,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_rushing ;		
-CREATE EXTERNAL TABLE nfl.kafka_rushing (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.rushing ;		
+CREATE EXTERNAL TABLE nfl_kafka.rushing (		
+
 `gameid`	string 	,
 `category`	string 	,
 `playerid`	string 	,
@@ -46,7 +46,7 @@ CREATE EXTERNAL TABLE nfl.kafka_rushing (
 `twoptm`	smallint 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"rushing"	,
@@ -54,11 +54,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_receiving ;		
-CREATE EXTERNAL TABLE nfl.kafka_receiving (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.receiving ;		
+CREATE EXTERNAL TABLE nfl_kafka.receiving (		
+
 `gameid`	string 	,
 `category`	string 	,
 `playerid`	string 	,
@@ -74,7 +73,7 @@ CREATE EXTERNAL TABLE nfl.kafka_receiving (
 `twoptm`	smallint 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"receiving"	,
@@ -82,11 +81,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_kicking ;		
-CREATE EXTERNAL TABLE nfl.kafka_kicking (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.kicking ;		
+CREATE EXTERNAL TABLE nfl_kafka.kicking (		
+
 `gameid`	string 	,
 `category`	string 	,
 `playerid`	string 	,
@@ -104,7 +102,7 @@ CREATE EXTERNAL TABLE nfl.kafka_kicking (
 `xptot`	smallint 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"kicking"	,
@@ -112,11 +110,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_punting ;		
-CREATE EXTERNAL TABLE nfl.kafka_punting (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.punting ;		
+CREATE EXTERNAL TABLE nfl_kafka.punting (		
+
 `gameid`	string 	,
 `category`	string 	,
 `playerid`	string 	,
@@ -130,7 +127,7 @@ CREATE EXTERNAL TABLE nfl.kafka_punting (
 `lng`	smallint 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"punting"	,
@@ -138,11 +135,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_kickret ;		
-CREATE EXTERNAL TABLE nfl.kafka_kickret (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.kickret ;		
+CREATE EXTERNAL TABLE nfl_kafka.kickret (		
+
 `gameid`	string 	,
 `category`	string 	,
 `playerid`	string 	,
@@ -156,7 +152,7 @@ CREATE EXTERNAL TABLE nfl.kafka_kickret (
 `lngtd`	smallint 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"kickret"	,
@@ -164,11 +160,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_puntret ;		
-CREATE EXTERNAL TABLE nfl.kafka_puntret (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.puntret ;		
+CREATE EXTERNAL TABLE nfl_kafka.puntret (		
+
 `gameid`	string 	,
 `category`	string 	,
 `playerid`	string 	,
@@ -182,7 +177,7 @@ CREATE EXTERNAL TABLE nfl.kafka_puntret (
 `lngtd`	smallint 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"puntret"	,
@@ -190,11 +185,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_defense ;		
-CREATE EXTERNAL TABLE nfl.kafka_defense (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.defense ;		
+CREATE EXTERNAL TABLE nfl_kafka.defense (		
+
 `gameid`	string 	,
 `category`	string 	,
 `playerid`	string 	,
@@ -208,7 +202,7 @@ CREATE EXTERNAL TABLE nfl.kafka_defense (
 `ffum`	smallint 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"defense"	,
@@ -216,11 +210,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_fumbles ;		
-CREATE EXTERNAL TABLE nfl.kafka_fumbles (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.fumbles ;		
+CREATE EXTERNAL TABLE nfl_kafka.fumbles (		
+
 `gameid`	string 	,
 `category`	string 	,
 `playerid`	string 	,
@@ -234,7 +227,7 @@ CREATE EXTERNAL TABLE nfl.kafka_fumbles (
 `lost`	smallint 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"fumbles"	,
@@ -242,11 +235,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_team ;		
-CREATE EXTERNAL TABLE nfl.kafka_team (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.team ;		
+CREATE EXTERNAL TABLE nfl_kafka.team (		
+
 `gameid`	string 	,
 `homeaway`	string 	,
 `team`	string 	,
@@ -269,7 +261,7 @@ CREATE EXTERNAL TABLE nfl.kafka_team (
 `top`	string 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"team"	,
@@ -277,11 +269,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_drive_summary ;		
-CREATE EXTERNAL TABLE nfl.kafka_drive_summary (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.drive_summary ;		
+CREATE EXTERNAL TABLE nfl_kafka.drive_summary (		
+
 `driveid`	string 	,
 `gameid`	string 	,
 `posteam`	string 	,
@@ -303,7 +294,7 @@ CREATE EXTERNAL TABLE nfl.kafka_drive_summary (
 `end_team`	string 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"drive_summary"	,
@@ -311,11 +302,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_drive_plays ;		
-CREATE EXTERNAL TABLE nfl.kafka_drive_plays (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.drive_plays ;		
+CREATE EXTERNAL TABLE nfl_kafka.drive_plays (		
+
 `driveid`	string 	,
 `gameid`	string 	,
 `playid`	string 	,
@@ -331,7 +321,7 @@ CREATE EXTERNAL TABLE nfl.kafka_drive_plays (
 `note`	string 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"drive_plays"	,
@@ -339,11 +329,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_drive_player_plays ;		
-CREATE EXTERNAL TABLE nfl.kafka_drive_player_plays (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.drive_player_plays ;		
+CREATE EXTERNAL TABLE nfl_kafka.drive_player_plays (		
+
 `playerid`	string 	,
 `playid`	string 	,
 `driveid`	string 	,
@@ -356,7 +345,7 @@ CREATE EXTERNAL TABLE nfl.kafka_drive_player_plays (
 `ord`	string 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"drive_player_plays"	,
@@ -364,11 +353,10 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_scoring_summary ;		
-CREATE EXTERNAL TABLE nfl.kafka_scoring_summary (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.scoring_summary ;		
+CREATE EXTERNAL TABLE nfl_kafka.scoring_summary (		
+
 `gameid`	string 	,
 `playid`	string 	,
 `type`	string 	,
@@ -377,7 +365,7 @@ CREATE EXTERNAL TABLE nfl.kafka_scoring_summary (
 `team`	string 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"scoring_summary"	,
@@ -385,18 +373,17 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_scoring_players ;		
-CREATE EXTERNAL TABLE nfl.kafka_scoring_players (		
-		
+
+DROP TABLE IF EXISTS nfl_kafka.scoring_players ;		
+CREATE EXTERNAL TABLE nfl_kafka.scoring_players (		
+
 `gameid`	string 	,
 `playid`	string 	,
 `name`	string 	,
 `playerid`	string 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"scoring_players"	,
@@ -404,31 +391,12 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-DROP TABLE IF EXISTS nfl.kafka_games ;		
-CREATE EXTERNAL TABLE nfl.kafka_games (		
-		
-`season`	string 	,
-`week`	string 	,
+
+DROP TABLE IF EXISTS nfl_kafka.games ;		
+CREATE EXTERNAL TABLE nfl_kafka.games (		
+
+`season`	smallint 	,
+`week`	smallint 	,
 `type`	string 	,
 `gd`	string 	,
 `eid`	string 	,
@@ -439,17 +407,17 @@ CREATE EXTERNAL TABLE nfl.kafka_games (
 `k`	string 	,
 `hm`	string 	,
 `hnn`	string 	,
-`hs`	string 	,
+`hs`	smallint 	,
 `v`	string 	,
 `vnn`	string 	,
-`vs`	string 	,
+`vs`	smallint 	,
 `p`	string 	,
 `rz`	string 	,
 `ga`	string 	,
 `gt`	string 	,
 `timestamp`	timestamp 	
 )		
-		
+
 STORED BY 	'org.apache.hadoop.hive.kafka.KafkaStorageHandler'	
 TBLPROPERTIES (		,
 "kafka.topic" = 	"games"	,
@@ -457,5 +425,4 @@ TBLPROPERTIES (		,
 "kafka.serde.class" = 	"org.apache.hadoop.hive.serde2.avro.AvroSerDe"	
 )		
 ;		
-
 

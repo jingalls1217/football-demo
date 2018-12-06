@@ -1,11 +1,11 @@
-DROP DATABASE IF EXISTS nfl CASCADE;		
-CREATE DATABASE nfl ;		
+DROP DATABASE IF EXISTS nfl_stage CASCADE;		
+CREATE DATABASE nfl_stage ;		
 
-DROP TABLE IF EXISTS nfl.passing_stats ;		
-CREATE TABLE nfl.passing_stats (		
+DROP TABLE IF EXISTS nfl_stage.passing ;		
+CREATE TABLE nfl_stage.passing (		
 
 `gameid`	string 	,
- 	 	 
+`category`	string 	,
 `playerid`	string 	,
 `team`	string 	,
 `homeaway`	string 	,
@@ -17,16 +17,16 @@ CREATE TABLE nfl.passing_stats (
 `ints`	smallint 	,
 `twopta`	smallint 	,
 `twoptm`	smallint 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
 STORED AS ORC 		
 ;		
 
-DROP TABLE IF EXISTS nfl.rushing_stats ;		
-CREATE TABLE nfl.rushing_stats (		
+DROP TABLE IF EXISTS nfl_stage.rushing ;		
+CREATE TABLE nfl_stage.rushing (		
 
 `gameid`	string 	,
- 	 	 
+`category`	string 	,
 `playerid`	string 	,
 `team`	string 	,
 `homeaway`	string 	,
@@ -38,16 +38,16 @@ CREATE TABLE nfl.rushing_stats (
 `lngtd`	smallint 	,
 `twopta`	smallint 	,
 `twoptm`	smallint 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
 STORED AS ORC 		
 ;		
 
-DROP TABLE IF EXISTS nfl.receiving_stats ;		
-CREATE TABLE nfl.receiving_stats (		
+DROP TABLE IF EXISTS nfl_stage.receiving ;		
+CREATE TABLE nfl_stage.receiving (		
 
 `gameid`	string 	,
- 	 	 
+`category`	string 	,
 `playerid`	string 	,
 `team`	string 	,
 `homeaway`	string 	,
@@ -59,16 +59,16 @@ CREATE TABLE nfl.receiving_stats (
 `lngtd`	smallint 	,
 `twopta`	smallint 	,
 `twoptm`	smallint 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC		
 ;		
 
-DROP TABLE IF EXISTS nfl.kicking_stats ;		
-CREATE TABLE nfl.kicking_stats (		
+DROP TABLE IF EXISTS nfl_stage.kicking ;		
+CREATE TABLE nfl_stage.kicking (		
 
 `gameid`	string 	,
- 	 	 
+`category`	string 	,
 `playerid`	string 	,
 `team`	string 	,
 `homeaway`	string 	,
@@ -82,16 +82,16 @@ CREATE TABLE nfl.kicking_stats (
 `xpa`	smallint 	,
 `xpb`	smallint 	,
 `xptot`	smallint 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.punting_stats ;		
-CREATE TABLE nfl.punting_stats (		
+DROP TABLE IF EXISTS nfl_stage.punting ;		
+CREATE TABLE nfl_stage.punting (		
 
 `gameid`	string 	,
- 	 	 
+`category`	string 	,
 `playerid`	string 	,
 `team`	string 	,
 `homeaway`	string 	,
@@ -101,16 +101,16 @@ CREATE TABLE nfl.punting_stats (
 `avg`	smallint 	,
 `i20`	smallint 	,
 `lng`	smallint 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.kickret_stats ;		
-CREATE TABLE nfl.kickret_stats (		
+DROP TABLE IF EXISTS nfl_stage.kickret ;		
+CREATE TABLE nfl_stage.kickret (		
 
 `gameid`	string 	,
- 	 	 
+`category`	string 	,
 `playerid`	string 	,
 `team`	string 	,
 `homeaway`	string 	,
@@ -120,16 +120,16 @@ CREATE TABLE nfl.kickret_stats (
 `tds`	smallint 	,
 `lng`	smallint 	,
 `lngtd`	smallint 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.puntret_stats ;		
-CREATE TABLE nfl.puntret_stats (		
+DROP TABLE IF EXISTS nfl_stage.puntret ;		
+CREATE TABLE nfl_stage.puntret (		
 
 `gameid`	string 	,
- 	 	 
+`category`	string 	,
 `playerid`	string 	,
 `team`	string 	,
 `homeaway`	string 	,
@@ -139,16 +139,16 @@ CREATE TABLE nfl.puntret_stats (
 `tds`	smallint 	,
 `lng`	smallint 	,
 `lngtd`	smallint 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.defense_stats ;		
-CREATE TABLE nfl.defense_stats (		
+DROP TABLE IF EXISTS nfl_stage.defense ;		
+CREATE TABLE nfl_stage.defense (		
 
 `gameid`	string 	,
- 	 	 
+`category`	string 	,
 `playerid`	string 	,
 `team`	string 	,
 `homeaway`	string 	,
@@ -158,16 +158,16 @@ CREATE TABLE nfl.defense_stats (
 `sk`	smallint 	,
 `ints`	smallint 	,
 `ffum`	smallint 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.fumbles_stats ;		
-CREATE TABLE nfl.fumbles_stats (		
+DROP TABLE IF EXISTS nfl_stage.fumbles ;		
+CREATE TABLE nfl_stage.fumbles (		
 
 `gameid`	string 	,
- 	 	 
+`category`	string 	,
 `playerid`	string 	,
 `team`	string 	,
 `homeaway`	string 	,
@@ -177,13 +177,13 @@ CREATE TABLE nfl.fumbles_stats (
 `trcv`	smallint 	,
 `yds`	smallint 	,
 `lost`	smallint 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.team_stats ;		
-CREATE TABLE nfl.team_stats (		
+DROP TABLE IF EXISTS nfl_stage.team ;		
+CREATE TABLE nfl_stage.team (		
 
 `gameid`	string 	,
 `homeaway`	string 	,
@@ -205,13 +205,13 @@ CREATE TABLE nfl.team_stats (
 `ptyds`	smallint 	,
 `ptavg`	smallint 	,
 `top`	string 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.drive_summary_stats ;		
-CREATE TABLE nfl.drive_summary_stats (		
+DROP TABLE IF EXISTS nfl_stage.drive_summary ;		
+CREATE TABLE nfl_stage.drive_summary (		
 
 `driveid`	string 	,
 `gameid`	string 	,
@@ -232,13 +232,13 @@ CREATE TABLE nfl.drive_summary_stats (
 `end_time`	string 	,
 `end_yrdln`	string 	,
 `end_team`	string 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.drive_plays_stats ;		
-CREATE TABLE nfl.drive_plays_stats (		
+DROP TABLE IF EXISTS nfl_stage.drive_plays ;		
+CREATE TABLE nfl_stage.drive_plays (		
 
 `driveid`	string 	,
 `gameid`	string 	,
@@ -253,13 +253,13 @@ CREATE TABLE nfl.drive_plays_stats (
 `posteam`	string 	,
 `desc`	string 	,
 `note`	string 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.drive_player_plays_stats ;		
-CREATE TABLE nfl.drive_player_plays_stats (		
+DROP TABLE IF EXISTS nfl_stage.drive_player_plays ;		
+CREATE TABLE nfl_stage.drive_player_plays (		
 
 `playerid`	string 	,
 `playid`	string 	,
@@ -271,13 +271,13 @@ CREATE TABLE nfl.drive_player_plays_stats (
 `statId`	smallint 	,
 `yards`	smallint 	,
 `ord`	string 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.scoring_summary_stats ;		
-CREATE TABLE nfl.scoring_summary_stats (		
+DROP TABLE IF EXISTS nfl_stage.scoring_summary ;		
+CREATE TABLE nfl_stage.scoring_summary (		
 
 `gameid`	string 	,
 `playid`	string 	,
@@ -285,42 +285,25 @@ CREATE TABLE nfl.scoring_summary_stats (
 `desc`	string 	,
 `qtr`	smallint 	,
 `team`	string 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.scoring_players_stats ;		
-CREATE TABLE nfl.scoring_players_stats (		
+DROP TABLE IF EXISTS nfl_stage.scoring_players ;		
+CREATE TABLE nfl_stage.scoring_players (		
 
 `gameid`	string 	,
 `playid`	string 	,
 `name`	string 	,
 `playerid`	string 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
-DROP TABLE IF EXISTS nfl.season_dim ;		
-CREATE TABLE nfl.season_dim (		
-
-`season`	string 	,
-`start_dow`	string 	,
-`season_start_dt`	date 	,
-`reg_wk_start`	smallint 	,
-`reg_wk_end`	smallint 	,
-`post_wk_start`	smallint 	,
-`post_wk_end`	smallint 	,
-`sb_wk`	smallint 	,
-`thu_wk_start`	smallint 	,
-`sat_wk_start`	smallint 	 
-)		
-STORED AS ORC 		
-;		
-
-DROP TABLE IF EXISTS nfl.games_dim ;		
-CREATE TABLE nfl.games_dim (		
+DROP TABLE IF EXISTS nfl_stage.games ;		
+CREATE TABLE nfl_stage.games (		
 
 `season`	smallint 	,
 `week`	smallint 	,
@@ -342,8 +325,8 @@ CREATE TABLE nfl.games_dim (
 `rz`	string 	,
 `ga`	string 	,
 `gt`	string 	,
-`timestamp`	timestamp 	 
+`timestamp`	timestamp 	
 )		
-STORED AS ORC 		
+STORED AS ORC  		
 ;		
 
